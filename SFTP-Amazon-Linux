@@ -1,0 +1,13 @@
+groupadd sftpgroup
+
+
+drwxr-xr-x 3 root     root      4096 Aug 22 10:00 achal
+drwxrwxr-x 2 achal achal 4096 Aug 22 10:32 upload
+
+Subsystem sftp internal-sftp
+
+   Match Group sftpgroup
+   ChrootDirectory %h
+   ForceCommand internal-sftp
+   X11Forwarding no
+   AllowTcpForwarding no
